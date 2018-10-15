@@ -75,8 +75,21 @@ public class Board {
         }
         else {
             paeTile = tileId;
-            tile = (FrameLayout) tileList.get(paeTile);
-            tile.setBackground(drawer.drawSquare("패"));
+//            tile = (FrameLayout) tileList.get(paeTile);
+//            tile.setBackground(drawer.drawSquare("패")); //스크린에 띄울 부분
         }
     }
+	public int getPaeTile() {
+        return paeTile;
+    }
+	
+	public void setTileList(ArrayList tileList) {
+	    this.tileList = tileList;
+	}
+	
+	public void clear() {
+		hashMap.clear();
+		tmpTile=-1;
+		paeTile=-1;
+	}
 }

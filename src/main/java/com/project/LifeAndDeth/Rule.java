@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Rule {
 	Board board;
-	public Record record;
+	Record record;
 	
     public int black_Score = 0;//사실 안쓰임
     public int white_Score = 0;//사실 안쓰임22
@@ -310,6 +310,17 @@ public class Rule {
            return false;
        else
            return true;
+   }
+   public void setRecord(Record record) {
+       this.record = record;
+   }
+   
+   public Record getRecord() {
+       return record;
+   }
+   
+   public void clear() {
+	   move_Count=0;
    }
 
 }

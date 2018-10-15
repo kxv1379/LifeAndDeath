@@ -24,7 +24,8 @@ public class HomeController {
 	
 	Board board=new Board(updateList,0);
 	Rule rule=new Rule(board);
-	
+	Record record = new Record();
+	ArrayList tileList = new ArrayList();
 	
 
 	
@@ -45,7 +46,10 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		
+		rule.setRecord(record);
+		board.clear();
+		rule.clear();
+		record.record.clear();
 		
 		return "home";
 	}
@@ -54,7 +58,8 @@ public class HomeController {
 	@RequestMapping(value = "/putStone", method = RequestMethod.GET)// 돌 올려 놓을때
 	public ArrayList<Integer[]> putStone(@RequestParam int Num ,int color,int mode) {
 		updateList.clear();
-		if(mode!=-1) {
+		if(mode==-1) {
+			System.out.println("Edit mode");
 			if (color == 0) 
 				board.update(Num);
 			else {
@@ -62,18 +67,14 @@ public class HomeController {
 			}
 		}
 		else /*if(mode == Mode.PLAY)*/ {
-
-                if (rule.goRule(Num, color)){//rule에서 true값이 리턴 될 경우, rule안에서 moveCount가 이미 올라있음. 최소 moveCount = 1
-                    if(color==1)
-                    	updateList.set(0,new Integer[] {updateList.get(0)[0],2});
-                    else
-                    	updateList.set(0,new Integer[] {updateList.get(0)[0],2});
-                }
-             
-            
+			System.out.println("Play mode");
+                rule.goRule(Num, color);
+  
         }
+		
 		return updateList;
 		
 	}
+	
 	
 }

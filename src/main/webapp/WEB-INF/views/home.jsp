@@ -45,7 +45,7 @@
 <body>
 <div class="container">
 	<input type="hidden" id="color" name="color" value="Black">
-	<input type="hidden" id="mode" name="mode" value="Edit">
+	<input type="hidden" id="mode" name="mode" value="-1">
 	<div class="col-md-3">
 	<button id="whiteBucket" style="margin-top: 400px; background: transparent;" onclick="bucket('White')"><img id="whiteBucketImg" src="/LifeAndDeth/resources/img/WhiteBucket.png"></button>
 	</div>
@@ -91,7 +91,7 @@
 				</select>
 	
 					<ul class="nav navbar-nav navbar-left float-left">
-						<li><a id="confirm" onclick="confirm()"> 확인</a></li>
+						<li><a id="confirm" onclick="confirm()"> 확인</a>  <a id="reset" onclick="reset()"> 초기화</a></li>
 					</ul>
 			</div>
 		</div>
@@ -123,8 +123,12 @@
 		        			img.src="/LifeAndDeth/resources/img/Black.png";
 		        		else if(result[i][1]=="2")
 		        			img.src="/LifeAndDeth/resources/img/White.png";
+		        	}
+		        	if(result.length>0&&result[result.length-1][1]!="0"&&mode!=-1){
+		        		if(c=="Black")
+		        			document.getElementById("color").value="White";
 		        		else
-		        			img.src="";
+		        			document.getElementById("color").value="Black";
 		        	}
 		        }
 		        

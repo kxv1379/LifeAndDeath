@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Record {
 
-    private ArrayList<VO> record = new ArrayList();//VO{int x, int y, int color, int moveCount}///// VO:Quiz:Record = 1:n:1 모델
+    public ArrayList<VO> record = new ArrayList();//VO{int x, int y, int color, int moveCount}///// VO:Quiz:Record = 1:n:1 모델
 
     public ArrayList getRecord() {
         return record;

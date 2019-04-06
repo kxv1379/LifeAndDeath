@@ -42,6 +42,12 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjrt</artifactId>
+		    <version>1.6.10</version>
 		</dependency>	
 		
 		<!-- Logging -->
@@ -125,6 +131,127 @@
 		        <artifactId>jackson-mapper-asl</artifactId>
 		        <version>1.9.13</version>
 		</dependency>
+		
+		<dependency> 
+			<groupId>org.aspectj</groupId> 
+			<artifactId>aspectjrt</artifactId>
+			<version>1.8.6</version> 
+		</dependency> 
+		
+		<dependency> 
+			<groupId>org.aspectj</groupId> 
+			<artifactId>aspectjweaver</artifactId> 
+			<version>1.8.6</version> 
+		</dependency>
+		
+		<!-- Spring AOP를 위한 라이브러리 -->
+	    <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-aop</artifactId>
+	        <version>${org.springframework-version}</version>
+	    </dependency>
+	    
+	    <!-- Spring Transaction을 위한 라이브러리 -->
+	    <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-tx</artifactId>
+	        <version>${org.springframework-version}</version>
+	    </dependency>
+		
+		<!-- 스프링 테스트 -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- 컨넥션 풀을 위한 라이브러리 -->
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		 <!-- apache connection pool -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		
+		<!-- MyBatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.2.2</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+		 
+		 <!-- JDBC -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- MySQL -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.31</version>
+		</dependency>
+		
+		<!-- Google API -->
+		<dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-google</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+ 
+   		<dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+        
+        
+		<!-- Gson -->
+		<dependency>
+		   <groupId>com.google.code.gson</groupId>
+		   <artifactId>gson</artifactId>
+		   <version>2.3.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/aopalliance/aopalliance -->
+		<dependency>
+		    <groupId>aopalliance</groupId>
+		    <artifactId>aopalliance</artifactId>
+		    <version>1.0</version>
+		</dependency>
+		
+		<!-- AWS sdk -->
+		<dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-java-sdk</artifactId>
+		    <version>1.11.66</version>
+		</dependency>
+		
+		
+
+		
+
+
 
 
 	
